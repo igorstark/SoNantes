@@ -13,7 +13,7 @@ class DealsListViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var myDealTableView: UITableView!
     var myDealsList : Array<Deal> = Array<Deal>()
     
-    
+    let pushDealDetailSegue = "pushDealDetailSegue"
     
     
     override func viewDidLoad() {
@@ -22,6 +22,7 @@ class DealsListViewController: UIViewController, UITableViewDataSource, UITableV
         self.myDealTableView.dataSource = self
         
         self.myDealsList = DealWebService.GET(Dictionary<String, String>())
+        
         
         
         // Do any additional setup after loading the view.
@@ -47,14 +48,28 @@ class DealsListViewController: UIViewController, UITableViewDataSource, UITableV
         return self.myDealsList.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier(pushDealDetailSegue, sender: self)
+    }
     
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == pushDealDetailSegue, // Est-ce le bon segment cible ?
+            let destinationVC = segue.destinationViewController as? DealDetailVC, // La ViewController qui va être affichée est-elle bien DealDetailVC ?
+            let selectedDealRow = myDealTableView.indexPathForSelectedRow?.row // Peut-on récupérer l'index de la cellule sélectionnée ?
+        {
+            destinationVC.myDeal = self.myDealsList[selectedDealRow]
+        }
+        
     }
 
 }
+
+
+
+
+
+

@@ -42,11 +42,65 @@
                     <navigationItem key="navigationItem" id="1Jw-kC-Ntx"/>
                     <connections>
                         <outlet property="myDealTableView" destination="BuU-eV-QfX" id="mri-qK-0Yd"/>
+                        <segue destination="znJ-Rf-rmN" kind="show" identifier="pushDealDetailSegue" id="IXn-VR-lSK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="505" y="400"/>
+        </scene>
+        <!--Deal DetailVC-->
+        <scene sceneID="cMx-Ca-pAV">
+            <objects>
+                <viewController id="znJ-Rf-rmN" customClass="DealDetailVC" customModule="SoNantes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gEv-pI-58D"/>
+                        <viewControllerLayoutGuide type="bottom" id="hzs-bz-8UI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Tn-4m-PIb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePc-bG-fkI">
+                                <rect key="frame" x="20" y="40" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-d1-LmL">
+                                <rect key="frame" x="20" y="76" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nd6-3x-T7X">
+                                <rect key="frame" x="20" y="121" width="560" height="459"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nd6-3x-T7X" secondAttribute="trailing" constant="20" id="69p-hb-nMC"/>
+                            <constraint firstItem="Lzq-d1-LmL" firstAttribute="top" secondItem="ePc-bG-fkI" secondAttribute="bottom" constant="15" id="6CO-6s-WTY"/>
+                            <constraint firstItem="hzs-bz-8UI" firstAttribute="top" secondItem="nd6-3x-T7X" secondAttribute="bottom" constant="20" id="Adc-jh-Juw"/>
+                            <constraint firstItem="nd6-3x-T7X" firstAttribute="top" secondItem="Lzq-d1-LmL" secondAttribute="bottom" constant="24" id="HVw-EP-7dM"/>
+                            <constraint firstAttribute="trailing" secondItem="Lzq-d1-LmL" secondAttribute="trailing" constant="20" id="XG0-9O-ahD"/>
+                            <constraint firstItem="ePc-bG-fkI" firstAttribute="top" secondItem="gEv-pI-58D" secondAttribute="bottom" constant="20" id="Z2W-93-bY6"/>
+                            <constraint firstItem="Lzq-d1-LmL" firstAttribute="leading" secondItem="7Tn-4m-PIb" secondAttribute="leading" constant="20" id="fAq-3H-pOw"/>
+                            <constraint firstAttribute="trailing" secondItem="ePc-bG-fkI" secondAttribute="trailing" constant="20" id="j3M-W9-OO8"/>
+                            <constraint firstItem="ePc-bG-fkI" firstAttribute="leading" secondItem="7Tn-4m-PIb" secondAttribute="leading" constant="20" id="wdo-Fa-lbI"/>
+                            <constraint firstItem="nd6-3x-T7X" firstAttribute="leading" secondItem="7Tn-4m-PIb" secondAttribute="leading" constant="20" id="z2B-oV-4Dc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DealDescription" destination="nd6-3x-T7X" id="ezI-fj-VoN"/>
+                        <outlet property="DealName" destination="Lzq-d1-LmL" id="PqP-5J-Jr1"/>
+                        <outlet property="DealTitle" destination="ePc-bG-fkI" id="0bd-Fa-JO5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0Q-H6-XuW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="400"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FyT-Bf-CgW">

@@ -38,4 +38,8 @@ class Deal: NSObject {
         self.dealStartDate = Parser.parseDate(myDictionary, key: "DEBUT_BONPLAN")
         self.dealEndDate = Parser.parseDate(myDictionary, key: "FIN_BONPLAN")
     }
+    
+    override init() {
+        super.init()
+    }
 }
