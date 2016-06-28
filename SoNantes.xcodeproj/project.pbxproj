@@ -14,6 +14,10 @@
 		7819C6C81D2258ED0095A2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7819C6C61D2258ED0095A2A1 /* LaunchScreen.storyboard */; };
 		7819C6D31D2258ED0095A2A1 /* SoNantesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819C6D21D2258ED0095A2A1 /* SoNantesTests.swift */; };
 		7819C6DE1D2258ED0095A2A1 /* SoNantesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819C6DD1D2258ED0095A2A1 /* SoNantesUITests.swift */; };
+		7819C6ED1D2261E80095A2A1 /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819C6EC1D2261E80095A2A1 /* Deal.swift */; };
+		7819C6F01D22644B0095A2A1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819C6EF1D22644B0095A2A1 /* Parser.swift */; };
+		7819C6F31D22691C0095A2A1 /* DealWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819C6F21D22691C0095A2A1 /* DealWebService.swift */; };
+		7819C6F61D226ABF0095A2A1 /* DealsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7819C6F51D226ABF0095A2A1 /* DealsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		7819C6D91D2258ED0095A2A1 /* SoNantesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoNantesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7819C6DD1D2258ED0095A2A1 /* SoNantesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoNantesUITests.swift; sourceTree = "<group>"; };
 		7819C6DF1D2258ED0095A2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7819C6EC1D2261E80095A2A1 /* Deal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
+		7819C6EF1D22644B0095A2A1 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		7819C6F21D22691C0095A2A1 /* DealWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealWebService.swift; sourceTree = "<group>"; };
+		7819C6F51D226ABF0095A2A1 /* DealsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,10 @@
 		7819C6BC1D2258ED0095A2A1 /* SoNantes */ = {
 			isa = PBXGroup;
 			children = (
+				7819C6F41D226A700095A2A1 /* UserInterface */,
+				7819C6F11D2268FE0095A2A1 /* WebService */,
+				7819C6EE1D22641E0095A2A1 /* Utils */,
+				7819C6EB1D2261AD0095A2A1 /* Model */,
 				7819C6BD1D2258ED0095A2A1 /* AppDelegate.swift */,
 				7819C6BF1D2258ED0095A2A1 /* ViewController.swift */,
 				7819C6C11D2258ED0095A2A1 /* Main.storyboard */,
@@ -123,6 +135,38 @@
 				7819C6DF1D2258ED0095A2A1 /* Info.plist */,
 			);
 			path = SoNantesUITests;
+			sourceTree = "<group>";
+		};
+		7819C6EB1D2261AD0095A2A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7819C6EC1D2261E80095A2A1 /* Deal.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7819C6EE1D22641E0095A2A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7819C6EF1D22644B0095A2A1 /* Parser.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		7819C6F11D2268FE0095A2A1 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				7819C6F21D22691C0095A2A1 /* DealWebService.swift */,
+			);
+			name = WebService;
+			sourceTree = "<group>";
+		};
+		7819C6F41D226A700095A2A1 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				7819C6F51D226ABF0095A2A1 /* DealsListViewController.swift */,
+			);
+			name = UserInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7819C6F01D22644B0095A2A1 /* Parser.swift in Sources */,
+				7819C6ED1D2261E80095A2A1 /* Deal.swift in Sources */,
+				7819C6F61D226ABF0095A2A1 /* DealsListViewController.swift in Sources */,
 				7819C6C01D2258ED0095A2A1 /* ViewController.swift in Sources */,
 				7819C6BE1D2258ED0095A2A1 /* AppDelegate.swift in Sources */,
+				7819C6F31D22691C0095A2A1 /* DealWebService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
